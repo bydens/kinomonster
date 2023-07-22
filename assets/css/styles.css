@@ -46,6 +46,7 @@ header {
   /* background-color: green; */
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 header .header-nav {
@@ -111,6 +112,46 @@ main {
   /* height: 100vh; */
 }
 
+.main-slider-img {
+  position: absolute;
+  top: 0;
+  /* fixed img for resizing browther window */
+  object-fit: cover;
+  object-position: top;
+}
+
+.hero-movie {
+  height: 75vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-movie>p:first-child {
+  font-size: 64px;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.hero-movie>p:nth-child(2) {
+  font-size: 15px;
+  padding-bottom: 26px;
+}
+
+button {
+  width: 209px;
+  height: 57px;
+  font-size: 20px;
+  background-color: #FF501A;
+  color: white;
+  border: solid 0px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 .lbl-p {
   font-size: 20px;
 }
@@ -126,6 +167,7 @@ main {
   min-height: 155px;
   background-color: #0C0B0B;
   transition: 250ms all;
+  z-index: 2;
 }
 
 .poster-now:hover {
