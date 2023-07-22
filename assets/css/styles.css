@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@300;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0C0B0B;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.default-container {
+  max-width: 1716px;
+  margin: auto;
+}
+
+header {
+  background-color: green;
+}
+
+header .header-nav {
+  display: flex;
+  height: 56px;
+}
+
+header .header-nav ul {
+  display: flex;
+  align-items: center;
+  /* for position absolute in ul.second-menu>li:first-child>a::after*/
+  position: relative;
+}
+
+.header-nav-elems {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+ul.second-menu>li>a {
+  text-transform: uppercase;
+  padding: 0 0 0 17px;
+}
+
+ul.second-menu>li:last-child {
+  margin-left: 17px;
+}
+
+ul.second-menu>li:last-child>a {
+  border: solid 1px white;
+  width: 80px;
+  height: 41px;
+  /* padding: 10px 20px;
+  margin-left: 17px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* ul.second-menu>li:nth-child(4) { */
+ul.second-menu>li:nth-last-child(2) {
+  margin-left: 100px;
+}
+
+ul.second-menu>li:first-child>a {
+  margin-right: 10px;
+}
+
+ul.second-menu>li:first-child>a::after {
+  content: '';
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background-color: #FF3C00;
+  border-radius: 50%;
+  left: 64px;
+  top: 14px
+}
