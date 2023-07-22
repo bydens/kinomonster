@@ -46,7 +46,7 @@ header {
   /* background-color: green; */
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 header .header-nav {
@@ -152,7 +152,22 @@ button {
 button:hover {
   cursor: pointer;
 }
+.next-main-slider-dots {
+  display: flex;
+  justify-content: flex-end;
+  gap: 13px;
+}
+.next-main-slider-dots>span {
+  width: 13px;
+  height: 13px;
+  background-color: #808080;
+  z-index: 1;
+  border-radius: 50%;
+}
 
+.next-main-slider-dots>span.active {
+  background-color: #DFDFDF;
+}
 .fader-bg {
   position: absolute;
   top: 0;
