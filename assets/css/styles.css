@@ -186,8 +186,6 @@ main {
   padding-bottom: 26px;
 }
 
-
-
 button {
   width: 209px;
   height: 57px;
@@ -246,6 +244,7 @@ button:hover {
 
 .lbl-p {
   font-size: 20px;
+  position: relative;
 }
 
 .posters-now {
@@ -356,27 +355,42 @@ footer {
 
   .hero-movie>p:first-child {
     text-align: center;
-    /* font-size: 2rem; */
   }
 
   .hero-movie>p:nth-child(2) {
     text-align: center;
-    /* font-size: .7rem; */
   }
-
-  /* button {
-    width: auto;
-    height: auto;
-    font-size: .7rem;
-    padding: .5rem;
-  } */
 
   .next-main-slider-dots {
     justify-content: center;
   }
+
+  .posters-now,
+  .posters {
+    grid-template-columns: repeat(auto-fit, minmax(321px, 1fr));
+  }
+
+  .poster-now,
+  .poster {
+    min-width: auto;
+    min-height: auto;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-wrapper {
+    display: block;
+  }
+
+  .footer-wrapper .f-item {
+    margin-bottom: 3rem;
+  }
 }
 
-@media only screen and (max-device-width: 812px) {
+
+@media only screen and (max-device-width: 667px) {
   .hero-movie {
     justify-content: center;
     align-items: center;
@@ -384,22 +398,19 @@ footer {
 
   .hero-movie>p:first-child {
     text-align: center;
-    /*font-size: 2rem;*/
   }
 
   .hero-movie>p:nth-child(2) {
     text-align: center;
-    /*font-size: .7rem;*/
   }
-
-  /*button {*/
-  /*  width: auto;*/
-  /*  height: auto;*/
-  /*  font-size: .7rem;*/
-  /*  padding: .5rem;*/
-  /*}*/
 
   .next-main-slider-dots {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1723px) {
+  .default-container {
+    padding: 0 2%;
   }
 }
