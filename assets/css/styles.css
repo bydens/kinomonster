@@ -176,15 +176,17 @@ main {
 }
 
 .hero-movie>p:first-child {
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: bold;
   padding-bottom: 1rem;
 }
 
 .hero-movie>p:nth-child(2) {
-  font-size: 15px;
+  font-size: 1rem;
   padding-bottom: 26px;
 }
+
+
 
 button {
   width: 209px;
@@ -344,4 +346,60 @@ footer {
   color: #636363;
   font-size: 14px;
   padding: 36px 0 6px 0;
+}
+
+@media only screen and (max-device-width: 375px) {
+  .hero-movie {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-movie>p:first-child {
+    text-align: center;
+    /* font-size: 2rem; */
+  }
+
+  .hero-movie>p:nth-child(2) {
+    text-align: center;
+    /* font-size: .7rem; */
+  }
+
+  /* button {
+    width: auto;
+    height: auto;
+    font-size: .7rem;
+    padding: .5rem;
+  } */
+
+  .next-main-slider-dots {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-device-width: 812px) {
+  .hero-movie {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-movie>p:first-child {
+    text-align: center;
+    /*font-size: 2rem;*/
+  }
+
+  .hero-movie>p:nth-child(2) {
+    text-align: center;
+    /*font-size: .7rem;*/
+  }
+
+  /*button {*/
+  /*  width: auto;*/
+  /*  height: auto;*/
+  /*  font-size: .7rem;*/
+  /*  padding: .5rem;*/
+  /*}*/
+
+  .next-main-slider-dots {
+    justify-content: center;
+  }
 }
