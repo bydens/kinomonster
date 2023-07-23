@@ -1,8 +1,12 @@
 const checkpoint = 600;
 const slides = document.querySelectorAll('.hero>li');
-const dots =document.querySelectorAll('.next-main-slider-dots>span');
+const dots = document.querySelectorAll('.next-main-slider-dots>span');
 
 const header = document.querySelector('.header-nav');
+
+const mobileMenuElement = document.querySelector('.second-menu-mobile');
+const mobileMenuBtnElement = document.querySelector('.mobile-btn');
+
 
 let activeSlide = 0;
 let opacity = 1;
@@ -14,13 +18,15 @@ const onSlide = index => {
   dots[index].className = 'active';
 }
 
+mobileMenuElement.style.display = 'none';
+
 dots[activeSlide].className = 'active';
 onSlide(activeSlide);
 
 setInterval(() => {
   onSlide(activeSlide);
   activeSlide++;
-  if(activeSlide === slides.length) {
+  if (activeSlide === slides.length) {
     activeSlide = 0;
   }
 }, 3000);
@@ -37,7 +43,7 @@ window.addEventListener('scroll', () => {
   header.style.backgroundColor = 'transparent';
   opacity = 1 - currentScroll / checkpoint;
 
-  if(currentScroll >= checkpoint) {
+  if (currentScroll >= checkpoint) {
     header.style.backgroundColor = '#000000';
     opacity = 0;
   }
@@ -46,3 +52,11 @@ window.addEventListener('scroll', () => {
     item.getElementsByTagName('img')[0].style.opacity = String(opacity);
   })
 });
+
+mobileMenuBtnElement.addEventListener('click', () => {
+  if (mobileMenuElement.style.display === 'block') {
+    mobileMenuElement.style.display = 'none';
+    return;
+  }
+  mobileMenuElement.style.display = 'block';
+})
