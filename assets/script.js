@@ -20,7 +20,9 @@ const onSlide = index => {
 
 mobileMenuElement.style.display = 'none';
 
-dots[activeSlide].className = 'active';
+if (dots.length) {
+  dots[activeSlide].className = 'active';
+}
 onSlide(activeSlide);
 
 setInterval(() => {
