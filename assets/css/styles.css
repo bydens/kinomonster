@@ -176,13 +176,13 @@ main {
 }
 
 .hero-movie>p:first-child {
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: bold;
   padding-bottom: 1rem;
 }
 
 .hero-movie>p:nth-child(2) {
-  font-size: 15px;
+  font-size: 1rem;
   padding-bottom: 26px;
 }
 
@@ -244,6 +244,7 @@ button:hover {
 
 .lbl-p {
   font-size: 20px;
+  position: relative;
 }
 
 .posters-now {
@@ -298,7 +299,7 @@ button:hover {
   transform: scale(1.1);
 }
 
-.poster:hover::after {
+.poster>a:hover::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -344,4 +345,133 @@ footer {
   color: #636363;
   font-size: 14px;
   padding: 36px 0 6px 0;
+}
+
+@media only screen and (max-device-width: 375px) {
+  .hero-movie {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-movie>p:first-child {
+    text-align: center;
+  }
+
+  .hero-movie>p:nth-child(2) {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .next-main-slider-dots {
+    justify-content: center;
+  }
+
+  .posters-now,
+  .posters {
+    grid-template-columns: repeat(auto-fit, minmax(321px, 1fr));
+  }
+
+  .poster-now,
+  .poster {
+    min-width: auto;
+    min-height: auto;
+  }
+
+  button {
+    width: auto;
+    height: auto;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-wrapper {
+    display: block;
+    margin-bottom: 10rem;
+  }
+
+  .footer-wrapper .f-item {
+    margin-bottom: 3rem;
+  }
+}
+
+
+@media only screen and (max-device-width: 667px) {
+  .hero-movie {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-movie>p:first-child {
+    text-align: center;
+  }
+
+  .hero-movie>p:nth-child(2) {
+    text-align: center;
+  }
+
+  .next-main-slider-dots {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1723px) {
+  .default-container {
+    padding: 0 2%;
+  }
+}
+
+.player {
+  position: relative;
+  width: 100%;
+}
+
+.player::after {
+  content: '';
+  display: block;
+  /* 9 x 16 (9 * 100)/16 = 56.25% */
+  padding-top: 56.25%;
+}
+
+.player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.video-menu>ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.about {
+  color: #CDCDCD;
+  margin-bottom: 2rem;
+}
+
+.about-separator {
+  line-height: 1;
+  vertical-align: top;
+  padding: 0 .2rem;
+}
+
+.movie-description {
+  width: 38.5rem;
+  color: #878787;
+}
+
+.movie-description a {
+  padding-left: 1rem;
+  color: #D9D9D9;
 }
